@@ -15,7 +15,7 @@ Setup Instructions
 1. Clone the Repository
 Clone the project to your local machine using the following command:
 
-git clone https://github.com/abishekmsk7/Burn-The-Book-Interview.git
+git clone https://github.com/abishekmsk7/BurnTheBookInterview.git
 
 After cloning, the folder BurnTheBook will contain the complete Craft CMS site named testsite, along with all required files and a database backup.
 
