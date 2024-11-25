@@ -1,0 +1,44 @@
+columnSuffix: null
+handle: imageTransforms
+instructions: null
+name: 'Image Transforms'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Square
+        -
+          - value
+          - square
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - None
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Thumbnail
+        -
+          - value
+          - thumbnail
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

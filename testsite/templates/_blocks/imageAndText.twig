@@ -1,0 +1,26 @@
+{% embed '_components/section' with {
+    paddingY: block.padding.value,
+} %}
+    {% block sectionContent %}
+        <div>
+            <div class="flex flex-wrap ">
+                <div class="w-full lg:w-1/2  lg:my-auto {{ block.reverseLayout ? 'lg:order-2 mb-10' }} relative z-30">
+                    <div id="block-{{ block.id }}" class="{{ block.reverseLayout ? 'lg:pl-12' : 'lg:pr-12' }}">
+                        {% if block.heading %}
+                            <h2 class="mb-6 font-semibold text-2xl lg:text-4xl {{ block.whiteText ? 'text-white' }}">{{ block.heading }}</h2>
+                        {% endif %}
+
+                        <div class="text-lg break-words {{ block.whiteText ? 'text-white' }}">
+                            {% include '_components/redactor' with { content: block.text } %}
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 {{ block.reverseLayout ? 'order-first lg:order-1 mb-10 lg:my-auto' : 'order-first lg:order-last mb-10 lg:my-auto' }}">
+                    {% if block.image %}
+                        <img loading="lazy" class="w-full" src="{{ block.image.one.url(block.imageTransforms.value) ?? '' }}" alt="">                    
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endembed %}

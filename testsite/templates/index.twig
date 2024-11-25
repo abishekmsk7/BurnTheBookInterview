@@ -1,0 +1,16 @@
+{% extends "_layout/base" %}
+
+{% block body %}
+	{# Header #}
+	{% include '_layout/_header' %}
+
+	{% block content %}
+	    {% include 'news/index' %}
+	{% endblock %}
+
+	{# Footer #}
+	{% include '_layout/_footer' %}
+
+{% endblock %}
+    
+

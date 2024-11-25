@@ -1,0 +1,11 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.vertical {
+    transform: rotate(-90deg); 
+    text-wrap: nowrap;
+    transform-origin: bottom;  
+}
+p{
+	line-height: 1.5rem
+}

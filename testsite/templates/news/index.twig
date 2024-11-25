@@ -1,0 +1,28 @@
+{% extends "index" %}
+{% block content %}
+        {# ------- Variables ------- #}
+        {% set news = craft.entries.section('news').orderBy('postDate DESC')
+ %}
+        {% paginate news.limit(6) as pageInfo, pageEntries %}
+
+        {# ------- Template ------- #}
+
+        {% embed '_components/section' %} 
+            {% block sectionContent %}
+                <div class="px-4">
+                    <h1 class="text-3xl lg:text-5xl text-navy font-bold">Latest News</h1>
+                    <h2 class="text-xl text-blue mb-6">Never miss a thing</h2>
+                </div>
+                <div class="flex flex-wrap ">
+                    {% for item in pageEntries %}
+                        {% include '_components/cards/article' %}
+                    {% endfor %}
+                </div>
+                <div class="block ">
+                    {% include "_components/pagination" with {
+                        pagination: pageInfo,
+                    } %}
+                </div>
+            {% endblock %}
+        {% endembed %} 
+{% endblock %}

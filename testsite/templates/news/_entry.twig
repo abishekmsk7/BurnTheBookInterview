@@ -1,0 +1,51 @@
+{% extends "index" %}
+
+{% block content %}
+        {% embed '_components/section' with {
+            class: 'relative'
+        } %}
+
+            {% block sectionContent %}
+                <div class="w-fit mx-auto">
+                    <p class="bg-navy uppercase text-sm rounded-full text-white px-[8px] py-[4px]">{{entry.section.name}}</p>
+                </div>
+                <div class="mx-auto w-full lg:w-3/4">
+                    <div class="mb-6 mx-auto w-3/4 lg:w-4/5">
+                        <h1 class="text-2xl text-blue text-center font-medium lg:text-4xl">{{ entry.title }}</h1>
+                    </div>
+                    {% if entry.authorName|length %}
+                    <div class="mb-6">
+                        <p class="text-base text-center text-navy">by {{entry.authorName  }}, {{entry.postDate | date( 'M jS, yy' )}}</p>
+                    </div>
+                    {% endif %}
+                    <div class="relative mb-6 mx-auto overflow-hidden ">
+                        {% if entry.mainImage.one %}
+                            <img loading="lazy" class="w-full px-4" src="{{ entry.mainImage.one.url('articleImage') ?? '' }}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="mb-4 w-full mx-auto">
+                        {% for block in entry.contentBuilder.all() %}
+                            {% include '_blocks/' ~ block.type.handle %}
+                        {% endfor %}                    
+                    </div>
+                </div>
+                {% set entries = craft.entries.section('news').authorName(entry.authorName).limit(2) .all() %}
+                {% if entries %}
+                    <div class="mb-4 px-4">
+                            <h1 class="text-2xl text-navy text-center lg:text-3xl">Related News</h1>
+                        </div>
+                    <div class="flex flex-wrap ">
+                        {% for item in entries %}
+                            {% include '_components/cards/article' %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                    <div class="mb-4 text-center">
+                        <a href="/news" class="px-6 text-center w-fit mx-auto rounded-full border border-black py-3 | hover:bg-navy hover:text-white ">Back to news</a>
+                    </div>
+            {% endblock %}
+        {% endembed %}
+
+
+
+{% endblock %}

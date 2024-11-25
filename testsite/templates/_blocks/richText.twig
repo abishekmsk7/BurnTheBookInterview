@@ -1,0 +1,9 @@
+{% embed '_components/section' with {
+    paddingY: block.padding.value,
+} %}
+    {% block sectionContent %}
+        <div class="w-full mx-auto {{block.width.value}}">
+            {% include '_components/redactor' with { content: block.text } %}
+        </div>
+    {% endblock %}
+{% endembed %}

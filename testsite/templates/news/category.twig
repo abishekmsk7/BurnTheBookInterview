@@ -1,0 +1,11 @@
+{% extends "_layout/global" %}
+
+{% block content %}
+    {%- minify -%}
+        {% embed '_components/section' with {  } %}
+            {% block sectionContent %}
+
+            {% endblock %}
+        {% endembed %}
+
+{% endblock %}

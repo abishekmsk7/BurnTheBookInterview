@@ -1,0 +1,55 @@
+columnSuffix: null
+handle: width
+instructions: null
+name: Width
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Full Width'
+        -
+          - value
+          - w-full
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Half Width'
+        -
+          - value
+          - 'lg:w-1/2'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Three Quarters'
+        -
+          - value
+          - 'lg:w-3/4'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'One Quarters'
+        -
+          - value
+          - 'lg:w-1/4'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

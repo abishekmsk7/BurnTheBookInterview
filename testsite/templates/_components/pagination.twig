@@ -1,0 +1,39 @@
+
+
+{% if pagination is defined and pagination.totalPages > 1 %}
+
+   <div class="flex flex-wrap">
+
+      {% if pagination.prevUrl %}
+         <a href="{{ pagination.prevUrl }}" class="mr-1 text-blue  px-4 py-2 rounded-full | hover:bg-blue hover:text-white">
+            &lt;
+         </a>
+         {% else %}
+         <a class="mr-1 text-blue px-4 py-2 rounded-full cursor-not-allowed ">
+            &lt;
+         </a>
+      {% endif %}
+
+      {% for page, url in pagination.getPrevUrls(3) %}
+          <a href="{{ url }}" class="mr-1 px-4 py-2 rounded-full | hover:bg-blue hover:text-white">{{ page }}</a>
+      {% endfor %}
+
+      <span class="mr-1 px-4 py-2 text-white bg-blue rounded-full ">{{ pagination.currentPage }}</span>
+
+      {% for page, url in pagination.getNextUrls(3) %}
+          <a href="{{ url }}" class="mr-1 px-4 py-2 rounded-full | hover:bg-blue hover:text-white">{{ page }}</a>
+      {% endfor %}
+
+      {% if pagination.nextUrl %}
+         <a href="{{ pagination.nextUrl }}" class="mr-1 text-blue px-4 py-2 rounded-full | hover:bg-blue hover:text-white">
+            &gt;
+         </a>
+         {% else %}
+         <a class="mr-1  px-4 py-2 rounded-full text-blue cursor-not-allowed ">
+            &gt;
+         </a>
+      {% endif %}
+
+   </div>
+
+{% endif %}

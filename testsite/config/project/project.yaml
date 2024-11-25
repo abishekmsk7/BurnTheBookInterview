@@ -1,0 +1,72 @@
+dateModified: 1732534171
+email:
+  fromEmail: abishekms7@gmail.com
+  fromName: 'Craft Site'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  assets:
+    hasUrls: true
+    name: Assets
+    settings:
+      path: $PRIMARY_ASSETS_PATH
+    type: craft\fs\Local
+    url: $PRIMARY_ASSETS_URL
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: $PRIMARY_ASSETS_URL
+meta:
+  __names__:
+    1b2cf952-a9ed-486a-8dd8-be74115414cf: 'Craft Site' # Craft Site
+    2c379949-8c14-4875-b5f0-162c720cb22d: 'Rich Text' # Rich Text
+    3b9d30c1-a93b-4268-a313-fd840d8f5ed9: 'Article Image' # Article Image
+    10f39112-111f-4c02-b6fa-bb1ea54ce2b1: Description # Description
+    26bc567d-aa4e-4ba3-ae96-66859e54c1fa: 'Image Transforms' # Image Transforms
+    58d0e1b7-5af0-4f28-bca5-6edc9448142f: 'Author Name' # Author Name
+    71aefd52-fe8e-4c03-911c-8e5a2d7af4d5: Assets # Assets
+    98b466bb-97e7-448e-84a2-84a802931afd: News # News
+    122ccab7-faba-4bd6-ade6-d9f5a4cc307b: Text # Text
+    228c56d6-4c4b-4de4-aa7b-385591661cda: Simple # Simple
+    419eeb43-dd1b-4802-8e8a-db25a812d596: 'Main Image' # Main Image
+    588fd587-e28b-4dae-b639-4a550563c8f5: Heading # Heading
+    721c4a33-2c28-47e7-b769-8356d8257154: 'Craft Site' # Craft Site
+    62347ed5-f9bc-4354-baa2-bb8670d74f11: 'Content Builder' # Content Builder
+    263944d1-259b-4205-81b1-beac9e603be1: Full # Full
+    7356786d-81fd-47ec-9ab1-6fabc41ad7e1: 'Image and Text' # Image and Text
+    80514974-1421-4e34-957e-49ae988dd7e5: 'White Text' # White Text
+    c06c82b2-36e3-48ec-bc99-31712ff69bbc: Image # Image
+    c93c96a7-642c-465c-a35f-1386c8ff4be1: Thumbnail # Thumbnail
+    d6ff0fc5-e079-4122-aee6-b52245a026e7: News # News
+    e4262ebf-16b4-48e0-b742-08389f3b4024: Padding # Padding
+    e8835e60-5c9d-408d-816d-384b5dd8111f: Square # Square
+    eba9d875-d930-4e6a-aa58-de4497f6fb96: Width # Width
+    f0df6858-5d8c-4812-bf89-b17c116385b5: News # News
+    f55f1621-c4b6-4e40-8696-f50eb42e5a13: 'Reverse Layout' # Reverse Layout
+    fcaabefb-5d4e-44ae-a74b-f34412522982: Homepage # Homepage
+    fe86b1d3-9192-4dcd-ae58-c17f6b392a74: Homepage # Homepage
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Test Site'
+  retryDuration: null
+  schemaVersion: 5.5.0.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
